@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let cols = row.split(",");
                 if (cols[0] == studentId) {
                     document.getElementById("student-photo").src = cols[5]; // URL de la foto
-                    document.getElementById("student-name").innerText = cols[1]; // Nombre
+                    document.getElementById("student-name").innerText = cols[2]; // Nombre
                 }
             });
         });
