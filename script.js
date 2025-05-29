@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             rows.forEach(row => {
                 let cols = row.split(",");
                 if (cols[0] == studentId) {
-                    document.getElementById("student-photo").src = cols[6]; // URL de la foto
-                    document.getElementById("student-name").innerText = cols[2]; // Nombre
+                    document.getElementById("Foto URL").src = cols[6]; // URL de la foto
+                    document.getElementById("Nombre").innerText = cols[2]; // Nombre
                 }
             });
         });
