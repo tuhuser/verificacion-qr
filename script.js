@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let cols = row.split(",");
                 if (cols[0].trim() === studentCedula.trim()) {
                     document.getElementById("student-id").innerText = "Cédula: " + cols[0]; // Mostrar la cédula
-                    document.getElementById("student-name").innerText = "Nombre" + cols[1]; // Mostrar el nombre
+                    document.getElementById("student-name").innerText = "Nombre: " + cols[1]; // Mostrar el nombre
 
                     let imageUrl = cols[6].trim(); // URL de la imagen en la columna correspondiente
                     console.log("Cargando imagen:", imageUrl);
