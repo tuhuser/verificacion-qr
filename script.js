@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (cols[0].trim() === studentCedula.trim()) {
                     document.getElementById("student-id").innerText = "Cédula: " + cols[0]; // Mostrar la cédula
                     document.getElementById("student-name").innerText = cols[1]; // Mostrar el nombre
-                    document.getElementById("student-school").innerText = "Institucion" + cols[3]; // Mostrar el colegio
+                    document.getElementById("student-school").innerText = cols[3]; // Mostrar el colegio
 
                     let imageUrl = cols[6].trim(); // URL de la imagen en la columna correspondiente
                     console.log("Cargando imagen:", imageUrl);
