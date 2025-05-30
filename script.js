@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             rows.forEach(row => {
                 let cols = row.split(",");
                 if (cols[0].trim() === studentId.trim()) {
-                    let imageUrl = cols[4].trim(); // URL de la foto
-                    console.log("Cargando imagen:", imageUrl); // Muestra la URL en la consola
+                    let imageUrl = cols[4].trim(); // Columna de la foto
+                    console.log("Cargando imagen:", imageUrl); // Verifica la URL en consola
                     document.getElementById("student-photo").src = imageUrl;
                     document.getElementById("student-name").innerText = cols[1];
                 }
