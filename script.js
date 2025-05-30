@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
-    const studentId = urlParams.get("id");
+    const studentCedula = urlParams.get("id"); // Ahora "id" es la cédula
 
     fetch("https://docs.google.com/spreadsheets/d/1N7I1JPB2g_diEI0LzdqrzQzTmnLYFkBVZyYFTSgEVwY/export?format=csv")
         .then(response => response.text())
@@ -8,11 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
             let rows = data.split("\n");
             rows.forEach(row => {
                 let cols = row.split(",");
-                if (cols[0].trim() === studentId.trim()) {
-                    let imageUrl = cols[4].trim(); // Columna de la foto
-                    console.log("Cargando imagen:", imageUrl); // Verifica la URL en consola
-                    document.getElementById("student-photo").src = imageUrl;
-                    document.getElementById("student-name").innerText = cols[1];
+                if (cols[0].trim() === studentCedula.trim()) {
+                    document.getElementById("student-id").innerText = "Cédula: " + cols[0]; // Mostrar la cédula
+                    document.getElementById("student-name").innerText = cols[1]; // Mostrar el nombre
                 }
             });
         })
