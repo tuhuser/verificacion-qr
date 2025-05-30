@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let rows = data.split("\n");
             rows.forEach(row => {
                 let cols = row.split(",");
-                if (cols[0] == studentId) {
+                if (cols[0] == Id) {
                     document.getElementById("Foto URL").src = cols[6]; // URL de la foto
                     document.getElementById("Nombre").innerText = cols[2]; // Nombre
                 }
