@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const studentId = urlParams.get("id");
 
-    fetch("https://docs.google.com/spreadsheets/d/TU_ID/export?format=csv")
+    fetch("https://docs.google.com/spreadsheets/d/1N7I1JPB2g_diEI0LzdqrzQzTmnLYFkBVZyYFTSgEVwY/edit?gid=0#gid=0/export?format=csv")
         .then(response => response.text())
         .then(data => {
             let rows = data.split("\n");
