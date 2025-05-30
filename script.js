@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             rows.forEach(row => {
                 let cols = row.split(",");
                 if (cols[0].trim() === studentCedula.trim()) {
+                    document.getElementById("student-id").innerText = "Nombre: " + cols[1]; // Mostrar el nombre
                     document.getElementById("student-id").innerText = "Cédula: " + cols[0]; // Mostrar la cédula
                     document.getElementById("student-name").innerText = cols[1]; // Mostrar el nombre
                 }
