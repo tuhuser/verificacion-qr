@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (cols[0].trim() === studentCedula.trim()) {
                     document.getElementById("student-id").innerText = "Cédula: " + cols[0]; // Mostrar la cédula
                     document.getElementById("student-name").innerText = "Nombre" + cols[1]; // Mostrar el nombre
+
+                    let imageUrl = cols[6].trim(); // URL de la imagen en la columna correspondiente
+                    console.log("Cargando imagen:", imageUrl);
+                    document.getElementById("student-photo").src = imageUrl; // Mostrar la imagen
+                    found = true;
+
+
                 }
             });
         })
